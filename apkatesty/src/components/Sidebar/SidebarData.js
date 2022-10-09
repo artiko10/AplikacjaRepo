@@ -3,7 +3,6 @@ import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
 import * as IoIcons from 'react-icons/io';
 import * as GiIcons from 'react-icons/gi';
-import * as GrIcons from 'react-icons/gr';
 import * as MdIcons from 'react-icons/md';
 import * as BsIcons from 'react-icons/bs';
 
@@ -29,7 +28,7 @@ export const LeftbarData = [
     {
         title: 'Dropdown',
         path: '/dropdown',
-        icon: <GrIcons.GrSelect />,
+        icon: <AiIcons.AiOutlineSelect />,
         cName: 'nav-text'
     },
     {

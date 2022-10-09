@@ -3,6 +3,8 @@ import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import { LeftbarData } from './SidebarData'
+import './Sidebar.css';
+import { IconContext } from 'react-icons'
 
 function Sidebar() {
 const [leftbar, setLeftbar] = useState(false);
@@ -10,15 +12,16 @@ const showLeftbar = () => setLeftbar(!leftbar);
 
   return (
     <>
-        <div className="sidebar">
-            <Link to="#" className='menu-bars'>
-               <FaIcons.FaBars/> 
+    <IconContext.Provider value={{color: '#fff'}}>
+        <div className="topbar">
+            <Link to="#" className='menu-icons'>
+               <FaIcons.FaBars onClick={showLeftbar}/> 
             </Link>
         </div>
-        <nav className={leftbar ? 'nav-menu active' : 'nav-menu'}>
-            <ul className='nav-menu-items'>
-                <li className="navbar-toggle">
-                    <Link to="#" className='menu-bars'>
+        <nav className={leftbar ? 'left-menu active' : 'left-menu'}>
+            <ul className='nav-menu-items' onClick={showLeftbar}>
+                <li className="navbar-toggle"> 
+                    <Link to="#" className='menu-icons'>
                     <AiIcons.AiOutlineClose/>
                     </Link>
                 </li>
@@ -35,7 +38,7 @@ const showLeftbar = () => setLeftbar(!leftbar);
                 })}
             </ul>
         </nav>
-
+        </IconContext.Provider>
     </>
   )
 }

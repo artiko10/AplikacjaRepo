@@ -1,10 +1,17 @@
 import './App.css';
+import Sidebar from './components/Sidebar/Sidebar';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-     <h1>Praca inżynierska</h1>
-    </div>
+    <>
+    <Router>
+      <Sidebar />
+      <Routes>
+        <Route path='/' />
+      </Routes>
+     </Router>
+    </>
   );
 }
 

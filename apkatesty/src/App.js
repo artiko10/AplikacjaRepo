@@ -15,13 +15,13 @@ function App() {
     <Router>
       <Sidebar />
       <Routes>
-        <Route path='/' exact component={Home}/>
-        <Route path='/button'  component={Button}/>
-        <Route path='/checkbox'  component={Checkbox}/>
-        <Route path='/dropdown'  component={Dropdown}/>
-        <Route path='/input'  component={Input}/>
-        <Route path='/table'  component={Table}/>
-        <Route path='/alert'  component={Alert}/>
+        <Route path='/' exact element={<Home />}/>
+        <Route path='/button' element={<Button/>}/>
+        <Route path='/checkbox' element={<Checkbox/>}/>
+        <Route path='/dropdown' element={<Dropdown/>}/>
+        <Route path='/input' element={<Input/>}/>
+        <Route path='/table' element={<Table/>}/>
+        <Route path='/alert' element={<Alert/>}/>
       </Routes>
      </Router>
     </>

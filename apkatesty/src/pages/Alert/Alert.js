@@ -1,9 +1,10 @@
 import React from 'react'
 
+import './Alert.css';
 function Alert() {
   return (
     <div className='alert'>
-        <h1>Alert</h1>
+        <h3>Alert</h3>
     </div>
   );
 }

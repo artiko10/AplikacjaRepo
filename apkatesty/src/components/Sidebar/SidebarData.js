@@ -44,8 +44,8 @@ export const LeftbarData = [
         cName: 'nav-text'
     },
     {
-        title: 'Alert',
-        path: '/alert',
+        title: 'Forms',
+        path: '/forms',
         icon: <AiIcons.AiFillAlert />,
         cName: 'nav-text'
     },

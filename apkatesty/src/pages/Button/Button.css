@@ -1,5 +1,7 @@
 .button-section{
-    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    /* height: 100%; */
+    margin: 0 auto;
 }
 
 .button-section h1{
@@ -7,17 +9,33 @@ margin-bottom: 40px;
 }
 
 .button-section p{
-    margin-top: 10px;
-}
-
-.col1{
-    height: 500px;
+    margin-top: 4px;
 }
 
 
-.my-custom-row{
-    height:700px;
+.alertbutton{
+    height: 30px;
+    
 }
+
+.tasks p{
+    margin-top: 20px;
+}
+
+.tasks h3{
+    margin-bottom: 10px;
+}
+
+.tasks{
+    background-color: #e6b800;
+}
+
+
+.title{
+    margin-top: 15px;
+}
+
+
 
 
 .row-footer{

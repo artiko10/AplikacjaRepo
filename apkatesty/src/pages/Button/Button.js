@@ -1,5 +1,6 @@
-import React from "react";
 
+import React, { useState } from 'react';
+import Fade from 'react-bootstrap/Fade';
 import './Button.css';
 
 
@@ -12,13 +13,13 @@ function clickMe() {
 
 
 export default function App() {
-  
+  const [open, setOpen] = useState(false);
  
   
   return (
   <>
 
-<section class="button-section bg-dark">
+<section class="button-section">
   <div class="container">
     <div class="row">
       <div class="col-sm-12 my-5 p-2">
@@ -28,14 +29,15 @@ export default function App() {
     
    
       
-    <div class="col-sm-7"><div class="p-5 border rounded bg-primary tasks text-light">
+    <div class="col-sm-7"><div class="p-5 border rounded bg-success tasks text-light">
       <h3 class="font-weight-bold text-uppercase text-center">Tasks</h3>
 
       <p>1. Find the height & width of the button</p>
-      <button type="button" class="btn btn-warning" onClick={clickMe}>How tall & fat I am?</button>
+      <button type="button" class="btn btn-warning">How tall & fat I am?</button>
+        
         
       <p>2. Find the color of the button</p>
-      <button type="button" class="btn btn-success" onClick={clickMe}>What is my color?</button>
+      <button type="button" class="btn btn-primary" onClick={clickMe}>What is my color?</button>
         
       <p>3. Confirm button is diabled</p>
       <button type="button" class="btn btn-lg btn-warning" disabled>Disabled</button>
@@ -43,16 +45,19 @@ export default function App() {
       <p>4. Go to Home and come back here</p>
       <a href="http://localhost:3000/" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Go to home</a>
 
-      <p>5. Choose your favorite footballer and check if he has been selected correctly</p>
-      <div class="btn-group" role="group" aria-label="Basic example">
-        <button type="button" class="btn btn-secondary">Left</button>
-        <button type="button" class="btn btn-secondary">Middle</button>
-        <button type="button" class="btn btn-secondary">Right</button>
-      </div>
+      <p>5. Click on the button and check if the message is displayed</p>
+      <button type="button" class="btn btn-warning"  onClick={() => setOpen(!open)}
+        aria-controls="example-fade-text"
+        aria-expanded={open}>Click me</button>
+         <Fade in={open}>
+        <div id="example-fade-text" class="text-primary font-weight-bold text-uppercase">
+         Brawo udało ci się mnie kliknąć!
+        </div>
+      </Fade>
         
     </div></div>
-    <div class="col-sm-1 col1"></div>
-    <div class="col-sm-4 col1 my-5 "><div class="p-5 border rounded bg-primary text-light">
+    
+    <div class="col-sm-4 col1 my-5 offset-sm-1 "><div class="p-5 border rounded bg-success text-light">
      
      <h3>On completion of this exercise, 
      you can learn the following concepts:</h3>

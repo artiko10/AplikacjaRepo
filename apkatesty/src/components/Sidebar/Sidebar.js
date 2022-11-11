@@ -29,13 +29,13 @@ function Sidebar() {
 
   return (
     <Router>
-    <Navbar bg="primary" variant={"dark"} expand="lg">
+    <Navbar bg="success" variant={"dark"} expand="lg">
     <Container>
-      <Navbar.Brand href="#home">Praca Inżynierska</Navbar.Brand>
+      <Navbar.Brand>Praca Inżynierska</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="me-auto">
-          <Nav.Link as={Link} to={"/home"}>Home</Nav.Link>
+          <Nav.Link as={Link} to={"/"}>Home</Nav.Link>
           <Nav.Link as={Link} to={"/button"}>Button</Nav.Link>
           <Nav.Link as={Link} to={"/checkbox"}>Checkbox</Nav.Link>
           <Nav.Link as={Link} to={"/dropdown"}>Dropdown</Nav.Link>

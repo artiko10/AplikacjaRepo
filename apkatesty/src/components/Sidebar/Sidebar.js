@@ -22,6 +22,7 @@ import Button from '../../pages/Button/Button';
 import Dropdown from '../../pages/Dropdown/Dropdown';
 import Input from '../../pages/Input/Input';
 import Table from '../../pages/Table/Table';
+import Drag from '../../pages/Drag/Drag';
 
 
 function Sidebar() {
@@ -40,8 +41,9 @@ function Sidebar() {
           <Nav.Link as={Link} to={"/checkbox"}>Checkbox</Nav.Link>
           <Nav.Link as={Link} to={"/dropdown"}>Dropdown</Nav.Link>
           <Nav.Link as={Link} to={"/input"}>Input</Nav.Link>
-          <Nav.Link as={Link} to={"/table"}>Table</Nav.Link>
+          <Nav.Link as={Link} to={"/table"}>Datepicker</Nav.Link>
           <Nav.Link as={Link} to={"/forms"}>Forms</Nav.Link>
+          <Nav.Link as={Link} to={"/drag"}>Drag&Drop</Nav.Link>
      
         </Nav>
       </Navbar.Collapse>
@@ -56,6 +58,7 @@ function Sidebar() {
         <Route path='/input' element={<Input/>}/>
         <Route path='/table' element={<Table/>}/>
         <Route path='/forms' element={<Forms/>}/>
+        <Route path='/drag' element={<Drag/>}/>
 
         </Routes>
 

@@ -49,15 +49,13 @@ function Input() {
         
         <div class="col-sm-4 col1 my-5 offset-sm-1 "><div class="p-5 border rounded bg-success text-light">
          
-         <h3>On completion of this exercise, 
-         you can learn the following concepts:</h3>
+         <h3>In these exercises, you will learn such functions as:</h3>
            
          <ul>
-           <li>sendKeys()</li>  
-           <li>Keyboard TAB</li> 
-           <li>getAttribute()</li>  
-           <li>clear()</li> 
-           <li>isEnabled()</li>
+           <li>Java calendar & moment.js</li>  
+           <li>How to set dynamic dates</li> 
+           <li>How to handle calendar elements</li>  
+           
         
            
          </ul>

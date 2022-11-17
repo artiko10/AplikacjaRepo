@@ -153,8 +153,7 @@ function Checkbox() {
     </div></div>
     <div class="col-sm-4 col1 my-5 offset-sm-1"><div class="p-5 border rounded bg-success text-light">
      
-     <h3 class="text-center">On completion of this exercise, 
-     you can learn the following concepts:</h3>
+     <h3 class="text-center">In these exercises, you will learn such functions as:</h3>
        
      <ul>
        <li>click()</li>  

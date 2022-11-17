@@ -1,6 +1,31 @@
-import React from 'react'
+import React,{useState} from 'react'
+import Select from "react-select";
+import Dropdown from 'react-bootstrap/Dropdown';
+import DropdownButton from 'react-bootstrap/DropdownButton';
+import Form from 'react-bootstrap/Form';
+import MultiSelect from  'react-multiple-select-dropdown-lite'
+import  'react-multiple-select-dropdown-lite/dist/index.css'
+import './Dropdown.css';
 
-function Dropdown() {
+
+
+function Dropdowns() {
+  const [selects,setSelects]=useState();
+  const [value,setValue]=useState('');
+  const handleSelect=(e)=>{
+    console.log(e);
+    setValue(e)
+  }
+ const options = [
+  {value: "opcja 01", label: "opcja 01"},
+  {value: "opcja 02", label: "opcja 02"},
+  {value: "opcja 03", label: "opcja 03"},
+  {value: "opcja 04", label: "opcja 04"},
+  {value: "opcja 05", label: "opcja 05"},
+  {value: "opcja 06", label: "opcja 06"},
+  
+ ];
+
   return (
     <>
 
@@ -14,25 +39,50 @@ function Dropdown() {
         
        
           
-        <div class="col-sm-7"><div class="p-5 border rounded bg-success tasks text-light">
-          <h3 class="font-weight-bold text-uppercase text-center">Tasks</h3>
+        <div class="col-sm-7"><div class="p-5 border rounded bg-success tasks">
+          <h3 class="font-weight-bold text-uppercase text-center text-light">Tasks</h3>
     
-          <p>1. Find the height & width of the button</p>
-            
-          <p>2. Find the color of the button</p>
-            
-          <p>3. Confirm button is diabled</p>
-            
-          <p>4. Go to Home and come back here</p>
-    
-          <p>5. Choose your favorite footballer and check if he has been selected correctly</p>
-            
+          <p class="text-light">1. Select your favourite sport</p>
+          <Dropdown.Menu show value={selects} onChange={e=>setSelects(e.target.value)}>
+            <Dropdown.Item eventKey="1">Tenis</Dropdown.Item>
+            <Dropdown.Item eventKey="2">Football</Dropdown.Item>
+            <Dropdown.Item eventKey="3">Volleyball</Dropdown.Item>
+            <Dropdown.Item eventKey="4">Basketball</Dropdown.Item>
+          </Dropdown.Menu>
+          <h3>{selects}</h3>
+          <br></br><br></br><br></br><br></br><br></br><br></br>
+
+          <p class="text-light">2. Search for option1 and select it</p>
+          <Select
+          className="select"
+           isMulti 
+           options={options}
+           isClearable={true}
+           isSearchable={true}
+           isDisabled={false}
+           isLoading={false}
+           isRtl={false}/>
+          <p class="text-light">3. Choose one of the products and print all the options</p>
+          <DropdownButton
+      alignRight
+      title="Select item"
+      id="dropdown-menu-align-right"
+      onSelect={handleSelect}
+        >
+              <Dropdown.Item eventKey="milk">milk</Dropdown.Item>
+              <Dropdown.Item eventKey="bread">bread</Dropdown.Item>
+              <Dropdown.Item eventKey="butter">butter</Dropdown.Item>
+              <Dropdown.Item eventKey="potato">potato</Dropdown.Item>
+              <Dropdown.Item eventKey="tomato">tomato</Dropdown.Item>
+              <Dropdown.Item eventKey="cheese">cheese</Dropdown.Item>
+             
+      </DropdownButton>
+      <p class="text-primary">You selected: {value}</p>
         </div></div>
         
         <div class="col-sm-4 col1 my-5 offset-sm-1 "><div class="p-5 border rounded bg-success text-light">
          
-         <h3>On completion of this exercise, 
-         you can learn the following concepts:</h3>
+         <h3>In these exercises, you will learn such functions as:</h3>
            
          <ul>
            <li>click()</li>  
@@ -58,4 +108,4 @@ function Dropdown() {
   );
 }
 
-export default Dropdown
+export default Dropdowns

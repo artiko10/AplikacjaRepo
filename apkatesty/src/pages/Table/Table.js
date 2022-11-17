@@ -1,14 +1,28 @@
-import React from 'react'
+import { useState } from 'react';
+import Table from 'react-bootstrap/Table';
+import './Calendar.css';
+import 'react-date-range/dist/styles.css'; // main css file
+import 'react-date-range/dist/theme/default.css'; // theme css file
+import { addDays } from 'date-fns';
+import { DateRange } from 'react-date-range';
 
-function Table() {
+
+function Tables() {
+  const [state, setState] = useState([
+    {
+      startDate: new Date(),
+      endDate: null,
+      key: 'selection'
+    }
+  ]);
   return (
     <>
-
+    
     <section class="button-section">
       <div class="container">
         <div class="row">
           <div class="col-sm-12 my-5 p-2">
-          <h1 class="font-weight-bold text-uppercase text-light title">Table</h1>
+          <h1 class="font-weight-bold text-uppercase text-light title">Datepicker</h1>
           </div>
         
         
@@ -17,22 +31,18 @@ function Table() {
         <div class="col-sm-7"><div class="p-5 border rounded bg-success tasks text-light">
           <h3 class="font-weight-bold text-uppercase text-center">Tasks</h3>
     
-          <p>1. Find the height & width of the button</p>
-            
-          <p>2. Find the color of the button</p>
-            
-          <p>3. Confirm button is diabled</p>
-            
-          <p>4. Go to Home and come back here</p>
-    
-          <p>5. Choose your favorite footballer and check if he has been selected correctly</p>
-            
+          <p>1. Select a date from the beginning of the year to today</p>
+          <DateRange
+          editableDateInputs={true}
+          onChange={item => setState([item.selection])}
+           moveRangeOnFirstSelection={false}
+          ranges={state}
+            />
         </div></div>
         
         <div class="col-sm-4 col1 my-5 offset-sm-1 "><div class="p-5 border rounded bg-success text-light">
          
-         <h3>On completion of this exercise, 
-         you can learn the following concepts:</h3>
+         <h3>In these exercises, you will learn such functions as:</h3>
            
          <ul>
            <li>click()</li>  
@@ -58,4 +68,4 @@ function Table() {
   );
 }
 
-export default Table
+export default Tables

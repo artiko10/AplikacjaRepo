@@ -23,6 +23,8 @@ import Dropdown from '../../pages/Dropdown/Dropdown';
 import Input from '../../pages/Input/Input';
 import Table from '../../pages/Table/Table';
 import Drag from '../../pages/Drag/Drag';
+import Upload from '../../pages/Upload/Upload';
+import Slider from '../../pages/Slider/Slider';
 
 
 function Sidebar() {
@@ -44,6 +46,8 @@ function Sidebar() {
           <Nav.Link as={Link} to={"/table"}>Datepicker</Nav.Link>
           <Nav.Link as={Link} to={"/forms"}>Forms</Nav.Link>
           <Nav.Link as={Link} to={"/drag"}>Drag&Drop</Nav.Link>
+          <Nav.Link as={Link} to={"/upload"}>Upload</Nav.Link>
+          <Nav.Link as={Link} to={"/slider"}>Slider</Nav.Link>
      
         </Nav>
       </Navbar.Collapse>
@@ -59,6 +63,8 @@ function Sidebar() {
         <Route path='/table' element={<Table/>}/>
         <Route path='/forms' element={<Forms/>}/>
         <Route path='/drag' element={<Drag/>}/>
+        <Route path='/upload' element={<Upload/>}/>
+        <Route path='/slider' element={<Slider/>}/>
 
         </Routes>
 

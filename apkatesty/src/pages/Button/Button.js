@@ -2,7 +2,10 @@
 import React, { useState } from 'react';
 import Fade from 'react-bootstrap/Fade';
 import './Button.css';
-
+import Tooltip from 'react-bootstrap/Tooltip';
+import Button from 'react-bootstrap/Button';
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import Modal from 'react-bootstrap/Modal';
 
 
 
@@ -15,6 +18,18 @@ function clickMe() {
 export default function App() {
   const [open, setOpen] = useState(false);
  
+  //tooltip
+  const renderTooltip = (props) => (
+    <Tooltip id="button-tooltip" {...props}>
+      This is tooltip
+    </Tooltip>
+  );
+
+  //popup
+  const [displayPopup, setPopup] = useState(false);
+
+  const closePopup = () => setPopup(false);
+  const showPopup = () => setPopup(true);
   
   return (
   <>
@@ -31,27 +46,48 @@ export default function App() {
       
     <div class="col-sm-7"><div class="p-5 border rounded bg-success tasks text-light">
       <h3 class="font-weight-bold text-uppercase text-center">Tasks</h3>
+        
+      <p>1. Click on the button and see if it displays a popup with the content</p>
+      <Button variant="danger" onClick={showPopup}>
+      Open popup
+      </Button>
 
-      <p>1. Find the height & width of the button</p>
-      <button type="button" class="btn btn-warning">How tall & fat I am?</button>
+      <Modal show={displayPopup} onHide={closePopup}>
+        <Modal.Header closeButton>
+          <Modal.Title>Example popup</Modal.Title>
+        </Modal.Header>
+        <Modal.Footer>
+          <Button variant="primary" onClick={closePopup}>
+            Save Changes
+          </Button>
+        </Modal.Footer>
+      </Modal>
+      <p>2. Hover over the button and check the text on the tooltip</p>
+
+      <OverlayTrigger
+      placement="right"
+      delay={{ show: 250, hide: 400 }}
+      overlay={renderTooltip}
+    >
+      <Button variant="warning">Check tooltip</Button>
+    </OverlayTrigger>
+
+      <p>3. Find the color of the button</p>
+      <button type="button" class="btn btn-primary" onClick={clickMe}>Check color</button>
         
-        
-      <p>2. Find the color of the button</p>
-      <button type="button" class="btn btn-primary" onClick={clickMe}>What is my color?</button>
-        
-      <p>3. Confirm button is diabled</p>
+      <p>4. Confirm button is diabled</p>
       <button type="button" class="btn btn-lg btn-warning" disabled>Disabled</button>
         
-      <p>4. Go to Home and come back here</p>
+      <p>5. Go to Home and come back here</p>
       <a href="http://localhost:3000/" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Go to home</a>
 
-      <p>5. Click on the button and check if the message is displayed</p>
+      <p>6. Click on the button and check if the message is displayed</p>
       <button type="button" class="btn btn-warning"  onClick={() => setOpen(!open)}
         aria-controls="example-fade-text"
         aria-expanded={open}>Click me</button>
          <Fade in={open}>
         <div id="example-fade-text" class="text-primary font-weight-bold text-uppercase">
-         Brawo udało ci się mnie kliknąć!
+        Congratulations, you have successfully clicked the button!
         </div>
       </Fade>
         

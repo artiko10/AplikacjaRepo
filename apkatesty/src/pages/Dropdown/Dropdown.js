@@ -77,7 +77,7 @@ function Dropdowns() {
               <Dropdown.Item eventKey="cheese">cheese</Dropdown.Item>
              
       </DropdownButton>
-      <p class="text-primary">You selected: {value}</p>
+      <h4 class="text-warning mt-4">You selected: {value}</h4>
         </div></div>
         
         <div class="col-sm-4 col1 my-5 offset-sm-1 "><div class="p-5 border rounded bg-success text-light">

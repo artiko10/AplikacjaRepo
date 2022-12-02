@@ -29,7 +29,7 @@ function Slider() {
 return (
     <>
 
-<section class="button-section">
+<section class="slider-section">
   <div class="container">
     <div class="row">
       <div class="col-sm-12 my-5 p-2">

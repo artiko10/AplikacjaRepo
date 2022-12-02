@@ -17,6 +17,11 @@ function clickMe() {
 
 export default function App() {
   const [open, setOpen] = useState(false);
+  const [state, setState] = useState(false);
+
+  const toggle=()=>{
+    setState(!state);
+  }
  
   //tooltip
   const renderTooltip = (props) => (
@@ -48,7 +53,7 @@ export default function App() {
       <h3 class="font-weight-bold text-uppercase text-center">Tasks</h3>
         
       <p>1. Click on the button and see if it displays a popup with the content</p>
-      <Button variant="danger" onClick={showPopup}>
+      <Button data-cy="PopupButton" variant="danger" onClick={showPopup}>
       Open popup
       </Button>
 
@@ -69,20 +74,20 @@ export default function App() {
       delay={{ show: 250, hide: 400 }}
       overlay={renderTooltip}
     >
-      <Button variant="warning">Check tooltip</Button>
+      <Button data-cy="TooltipButton" variant="warning">Check tooltip</Button>
     </OverlayTrigger>
 
       <p>3. Find the color of the button</p>
-      <button type="button" class="btn btn-primary" onClick={clickMe}>Check color</button>
+      <button type="button" data-cy="ColorButton" class="btn btn-primary" onClick={clickMe}>Check color</button>
         
       <p>4. Confirm button is diabled</p>
-      <button type="button" class="btn btn-lg btn-warning" disabled>Disabled</button>
+      <button type="button" data-cy="DisabledButton" class="btn btn-lg btn-warning" disabled>Disabled</button>
         
       <p>5. Go to Home and come back here</p>
-      <a href="http://localhost:3000/" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Go to home</a>
+      <a href="http://localhost:3000/" data-cy="HomeButton" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Go to home</a>
 
       <p>6. Click on the button and check if the message is displayed</p>
-      <button type="button" class="btn btn-warning"  onClick={() => setOpen(!open)}
+      <button type="button" data-cy="MessageButton" class="btn btn-warning"  onClick={() => setOpen(!open)}
         aria-controls="example-fade-text"
         aria-expanded={open}>Click me</button>
          <Fade in={open}>
@@ -90,7 +95,12 @@ export default function App() {
         Congratulations, you have successfully clicked the button!
         </div>
       </Fade>
-        
+      <p>7. Change color of the button</p>
+      <div id="task 6">
+      <button onClick={toggle} className={'toggle--button ' + (state ? 'toggle--close':'')}>
+        {state ? 'change to yellow' : 'change to blue'}
+      </button>
+      </div>   
     </div></div>
     
     <div class="col-sm-4 col1 my-5 offset-sm-1 "><div class="p-5 border rounded bg-success text-light">

@@ -36,7 +36,7 @@ function Checkbox() {
   return (
     <>
 
-<section class="button-section">
+<section class="checkbox-section">
   <div class="container">
     <div class="row">
       <div class="col-sm-12 my-5 p-2">
@@ -55,15 +55,15 @@ function Checkbox() {
       {['radio'].map((type) => (
         <div key={`reverse-${type}`} className="mb-3">
           <Form.Check
-           
-            label="1"
+           data-cy="BlackCheckbox"
+            label="Black"
             name="group1"
             type={type}
             id={`reverse-${type}-1`}
           />
           <Form.Check
-            
-            label="2"
+            data-cy="WhiteCheckbox"
+            label="White"
             name="group1"
             type={type}
             id={`reverse-${type}-2`}
@@ -75,24 +75,29 @@ function Checkbox() {
     
         
       <p>2. Find which one is selected</p>
-    
+    <div data-cy="Chekboxs task 2">
     <Form.Check 
      defaultChecked={checked}
      onChange={() => setChecked(!checked)}
             label={`Option one`}
+            data-cy="Option1Checkbox"
           />
          <Form.Check
             label={`Option two`} 
+            data-cy="Option2Checkbox"
           />
+    </div>
       <p>3. Find the bug</p>
       
       <Form>
-        <div className="mb-3">
+        <div data-cy="Chekboxs task 3" className="mb-3">
           <Form.Check 
             label={`Yes`}
+            data-cy="YesCheckbox"
           />
           <Form.Check
-            label={`No`} 
+            label={`No`}
+            data-cy="NoCheckbox" 
           />
         </div>
     </Form>
@@ -100,16 +105,18 @@ function Checkbox() {
       <p>4. Confirm last field is disabled</p>
       <Form>
       
-        <div className="mb-3">
+        <div data-cy="Chekboxs task 4" className="mb-3">
           <Form.Check
             inline
             label="1"
+            data-cy="CheckboxOne"
           
            
           />
           <Form.Check
             inline
             label="2"
+            data-cy="CheckboxTwo"
             
            
           />
@@ -117,7 +124,7 @@ function Checkbox() {
             inline
             disabled
             label="3 (disabled)"
-            
+            data-cy="CheckboxThree"
            
           />
         </div>
@@ -125,7 +132,7 @@ function Checkbox() {
     </Form>
 
       <p>5. Confirm that all options are selected</p>
-      <form className="form w-100">
+      <form data-cy="Chekboxs task 5" className="form w-100">
         <div className="form-check">
           <input
             type="checkbox"

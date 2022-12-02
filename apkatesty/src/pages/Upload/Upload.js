@@ -37,7 +37,7 @@ const componentRef = useRef();
   return (
     <>
 
-    <section class="button-section">
+    <section class="upload-section">
       <div class="container">
         <div class="row">
           <div class="col-sm-12 my-5 p-2">

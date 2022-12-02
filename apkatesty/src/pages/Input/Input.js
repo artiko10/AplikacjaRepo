@@ -5,7 +5,7 @@ function Input() {
   return (
     <>
 
-    <section class="button-section">
+    <section class="input-section">
       <div class="container">
         <div class="row">
           <div class="col-sm-12 my-5 p-2">

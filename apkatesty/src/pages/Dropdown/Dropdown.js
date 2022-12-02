@@ -2,9 +2,7 @@ import React,{useState} from 'react'
 import Select from "react-select";
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
-import Form from 'react-bootstrap/Form';
-import MultiSelect from  'react-multiple-select-dropdown-lite'
-import  'react-multiple-select-dropdown-lite/dist/index.css'
+import  'react-multiple-select-dropdown-lite/dist/index.css';
 import './Dropdown.css';
 
 
@@ -29,7 +27,7 @@ function Dropdowns() {
   return (
     <>
 
-    <section class="button-section">
+    <section class="dropdown-section">
       <div class="container">
         <div class="row">
           <div class="col-sm-12 my-5 p-2">

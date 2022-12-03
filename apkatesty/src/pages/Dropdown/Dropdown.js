@@ -41,14 +41,18 @@ function Dropdowns() {
           <h3 class="font-weight-bold text-uppercase text-center text-light">Tasks</h3>
     
           <p class="text-light">1. Select your favourite sport</p>
-          <Dropdown.Menu show value={selects} onChange={e=>setSelects(e.target.value)}>
-            <Dropdown.Item eventKey="1">Tenis</Dropdown.Item>
-            <Dropdown.Item eventKey="2">Football</Dropdown.Item>
-            <Dropdown.Item eventKey="3">Volleyball</Dropdown.Item>
-            <Dropdown.Item eventKey="4">Basketball</Dropdown.Item>
-          </Dropdown.Menu>
-          <h3>{selects}</h3>
-          <br></br><br></br><br></br><br></br><br></br><br></br>
+          <div class="select">
+        <select>
+            <option>--Select--</option>
+            <option>Football</option>
+            <option>Volleyball</option>
+            <option>Basketball</option>
+            <option>Golf</option>
+        </select>
+        <div class="select_arrow">
+        </div>
+    </div>
+      
 
           <p class="text-light">2. Search for option1 and select it</p>
           <Select

@@ -86,7 +86,13 @@ export default function App() {
       <p>5. Go to Home and come back here</p>
       <a href="http://localhost:3000/" data-cy="HomeButton" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Go to home</a>
 
-      <p>6. Click on the button and check if the message is displayed</p>
+      <p>6. Change color of the button</p>
+      <div id="task 6">
+      <button onClick={toggle} className={'toggle--button ' + (state ? 'toggle--close':'')}>
+        {state ? 'change to yellow' : 'change to blue'}
+      </button>
+      </div>   
+      <p>7. Click on the button and check if the message is displayed</p>
       <button type="button" data-cy="MessageButton" class="btn btn-warning"  onClick={() => setOpen(!open)}
         aria-controls="example-fade-text"
         aria-expanded={open}>Click me</button>
@@ -95,12 +101,6 @@ export default function App() {
         Congratulations, you have successfully clicked the button!
         </div>
       </Fade>
-      <p>7. Change color of the button</p>
-      <div id="task 6">
-      <button onClick={toggle} className={'toggle--button ' + (state ? 'toggle--close':'')}>
-        {state ? 'change to yellow' : 'change to blue'}
-      </button>
-      </div>   
     </div></div>
     
     <div class="col-sm-4 col1 my-5 offset-sm-1 "><div class="p-5 border rounded bg-success text-light">

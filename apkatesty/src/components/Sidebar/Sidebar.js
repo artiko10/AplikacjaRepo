@@ -25,6 +25,8 @@ import Table from '../../pages/Table/Table';
 import Drag from '../../pages/Drag/Drag';
 import Upload from '../../pages/Upload/Upload';
 import Slider from '../../pages/Slider/Slider';
+import Calendar from '../../pages/Calendar/Calendar'
+
 
 
 function Sidebar() {
@@ -43,11 +45,12 @@ function Sidebar() {
           <Nav.Link as={Link} to={"/checkbox"}>Checkbox</Nav.Link>
           <Nav.Link as={Link} to={"/dropdown"}>Dropdown</Nav.Link>
           <Nav.Link as={Link} to={"/input"}>Input</Nav.Link>
-          <Nav.Link as={Link} to={"/table"}>Datepicker</Nav.Link>
+          <Nav.Link as={Link} to={"/table"}>Table</Nav.Link>
           <Nav.Link as={Link} to={"/forms"}>Forms</Nav.Link>
           <Nav.Link as={Link} to={"/drag"}>Drag&Drop</Nav.Link>
           <Nav.Link as={Link} to={"/upload"}>Upload</Nav.Link>
           <Nav.Link as={Link} to={"/slider"}>Slider</Nav.Link>
+          <Nav.Link as={Link} to={"/calendar"}>Calendar</Nav.Link>
      
         </Nav>
       </Navbar.Collapse>
@@ -65,6 +68,7 @@ function Sidebar() {
         <Route path='/drag' element={<Drag/>}/>
         <Route path='/upload' element={<Upload/>}/>
         <Route path='/slider' element={<Slider/>}/>
+        <Route path='/calendar' element={<Calendar/>}/>
 
         </Routes>
 

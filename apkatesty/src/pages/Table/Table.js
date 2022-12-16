@@ -43,7 +43,7 @@ const sorting = (col) => {
     
           <p>1. Sort the table</p>
          <div className='container'>        
-          <table className="table text-light" >
+          <table id="MyTable" className="table text-light" >
             <thead>
               <th onClick={()=>sorting("first_name")}>Name</th>
               <th onClick={()=>sorting("last_name")}>Last name</th>

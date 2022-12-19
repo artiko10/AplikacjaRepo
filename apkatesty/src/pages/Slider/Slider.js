@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './Slider.css';
+import Form from 'react-bootstrap/Form';
 
 function Slider() {
 
@@ -44,14 +45,14 @@ return (
 
       <h5 class="text-light my-5">1. Check the percentage range for the grade</h5>
           <div>
-            <input id="SliderGrade" type='range' min='0' max="100" step="1" value={data} onChange={(e)=>setData(e.target.value)}/>
+            <Form.Range id="SliderGrade" type='range' min='0' max="100" step="1" value={data} onChange={(e)=>setData(e.target.value)}/>
             <h5 id="SliderData">{data} %</h5>
             <h5 id="SliderGrade" className="text-danger">Grade: {grade}</h5>
           </div>
           <h5 class="text-light my-5">2. Check the minimum and maximum range for both sliders </h5>
-          <input id="SliderFirstHalf" type='range' min='0' max="50" step="1" value={begining} onChange={(e)=>setbegin(e.target.value)}/>
+          <Form.Range id="SliderFirstHalf" type='range' min='0' max="50" step="1" value={begining} onChange={(e)=>setbegin(e.target.value)}/>
             <h5 id="FirstHalfData">from: {begining}</h5>
-            <input id="SliderSecondHalf" type='range' min='51' max="100" step="1" value={ending} onChange={(e)=>setending(e.target.value)}/>
+            <Form.Range id="SliderSecondHalf" type='range' min='51' max="100" step="1" value={ending} onChange={(e)=>setending(e.target.value)}/>
             <h5 id="SecondHalfData">to: {ending}</h5>
             <h5 class="text-light my-5">3. Check if this slider is disabled</h5>
             <label for="disabledRange" class="form-label">Disabled range</label>

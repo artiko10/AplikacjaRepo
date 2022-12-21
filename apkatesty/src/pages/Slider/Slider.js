@@ -2,8 +2,10 @@ import { useEffect, useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './Slider.css';
 import Form from 'react-bootstrap/Form';
+import Box from '@mui/material/Box';
+import Slider from '@mui/material/Slider';
 
-function Slider() {
+function Sliders() {
 
     const [data,setData]=useState(0)
     const [grade,setGrade]=useState('1')
@@ -44,6 +46,17 @@ return (
       <h3 class="font-weight-bold text-uppercase text-center">Tasks</h3>
 
       <h5 class="text-light my-5">1. Check the percentage range for the grade</h5>
+        
+      <Box width={300}>
+      <Slider
+        size="small"
+        defaultValue={70}
+        aria-label="Small"
+        valueLabelDisplay="auto"
+      />
+      <Slider defaultValue={50} aria-label="Default" valueLabelDisplay="auto" />
+    </Box>
+        
           <div>
             <Form.Range id="SliderGrade" type='range' min='0' max="100" step="1" value={data} onChange={(e)=>setData(e.target.value)}/>
             <h5 id="SliderData">{data} %</h5>
@@ -87,4 +100,4 @@ return (
 </>
 );
 }
-export default Slider
+export default Sliders

@@ -1,10 +1,8 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './Upload.css';
-import MyImage from '../Upload/picture.jpeg'
 import React,{useRef} from 'react';
 import { useReactToPrint } from "react-to-print";
-import MultiRangeSlider from "multi-range-slider-react";
 
 
 
@@ -41,7 +39,7 @@ const componentRef = useRef();
       <div class="container">
         <div class="row">
           <div class="col-sm-8 offset-sm-2 my-5 p-2">
-          <h1 class="font-weight-bold text-uppercase text-light title text-center">Upload</h1>
+          <h1 class="font-weight-bold text-uppercase text-light title text-center">Files</h1>
           </div>
       
         <div class="col-sm-8 offset-sm-2"><div class="p-5 border rounded bg-success tasks">
@@ -72,8 +70,8 @@ const componentRef = useRef();
             
             <p class="text-light">2. Download</p>
 
-          <img src={MyImage} alt="dsf.jpeg" /> <br></br>
-          <a href={MyImage} download={MyImage}><button type='submit' className="btn btn-primary">Download Now</button></a>
+          <img src="https://upload.wikimedia.org/wikipedia/en/a/a9/Example.jpg" alt="dsf.jpeg" /> <br></br>
+          <a href="https://upload.wikimedia.org/wikipedia/en/a/a9/Example.jpg"><button type='submit' className="btn btn-primary">Open image in tab</button></a>
 
           <p class="text-light">3. Print</p>
           <div class="print__section">
@@ -101,12 +99,6 @@ const componentRef = useRef();
         </div></div>
         </div>
     </div>   
-    
-    <div class="container">
-      <div class="col-sm-12 text-white text-center my-5 ">
-         <p class="text-light">Praca inżynierska - Testy automatyczne Cypress. Wszelkie prawa zastrzeżone</p> 
-         </div>
-    </div>
     </section>
     </>
   );

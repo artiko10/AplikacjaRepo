@@ -36,11 +36,11 @@ function Sidebar() {
     <Router>
     <Navbar bg="success" variant={"dark"} expand="lg">
     <Container>
-      <Navbar.Brand>Praca Inżynierska</Navbar.Brand>
+      <Navbar.Brand>Test learning application</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="me-auto">
-          <Nav.Link as={Link} to={"/"}>Home</Nav.Link>
+          <Nav.Link as={Link} to={"/"}>About Project</Nav.Link>
           <Nav.Link as={Link} to={"/button"}>Button</Nav.Link>
           <Nav.Link as={Link} to={"/checkbox"}>Checkbox</Nav.Link>
           <Nav.Link as={Link} to={"/dropdown"}>Dropdown</Nav.Link>

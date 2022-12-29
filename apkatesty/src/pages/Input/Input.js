@@ -18,7 +18,7 @@ function Input() {
         <div class="col-sm-8 offset-sm-2"><div class="p-5 border rounded bg-success tasks text-light">
           <h3 class="font-weight-bold text-uppercase text-center">Tasks</h3>
     
-          <p>1.Enter your name and press TAB</p>
+          <p>1. Enter your name and press TAB</p>
           <Form>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Control type="email" placeholder="Enter name" />
@@ -31,16 +31,13 @@ function Input() {
          defaultValue="football"/>
       </Form.Group>
 
-      <p>3. Enter the password and check if it is properly secured</p>
+      <p>3. Enter the password and clear it</p>
       <Form.Group className="mb-3" controlId="formBasicPassword">
         <Form.Control type="password" placeholder="Password"  />
       </Form.Group>
      
       </Form>
-            
-          <p>4.Chek if the field is readOnly</p>
-          <Form.Control type="text" placeholder="Readonly input here..." readOnly defaultValue="nothing can be entered here"/>
-          <p>5. Check if the field is disabled</p>
+          <p>4. Check if the field is disabled</p>
           <Form.Group className="mb-3">
       
       <Form.Control placeholder="Disabled input" disabled />
@@ -48,12 +45,6 @@ function Input() {
         </div></div>
         </div>
     </div>   
-    
-    <div class="container">
-      <div class="col-sm-12 text-white text-center my-5 ">
-         <p class="text-light">Praca inżynierska - Testy automatyczne Cypress. Wszelkie prawa zastrzeżone</p> 
-         </div>
-    </div>
     </section>
     </>
   );

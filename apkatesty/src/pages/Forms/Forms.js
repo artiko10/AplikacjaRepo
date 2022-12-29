@@ -113,12 +113,6 @@ function Forms() {
         </div></div>
         </div>
     </div>   
-    
-    <div class="container">
-      <div class="col-sm-12 text-white text-center my-5 ">
-         <p class="text-light">Praca inżynierska - Testy automatyczne Cypress. Wszelkie prawa zastrzeżone</p> 
-         </div>
-    </div>
     </section>
     </>
   );

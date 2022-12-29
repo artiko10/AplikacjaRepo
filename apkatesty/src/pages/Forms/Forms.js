@@ -27,14 +27,14 @@ function Forms() {
     <section class="forms-section">
       <div class="container">
         <div class="row">
-          <div class="col-sm-12 my-5 p-2">
-          <h1 class="font-weight-bold text-uppercase text-light title">Forms</h1>
+          <div class="col-sm-8 offset-sm-2 my-5 p-2">
+          <h1 class="font-weight-bold text-uppercase text-light title text-center">Forms</h1>
           </div>
         
         
        
           
-        <div class="col-sm-7"><div class="p-5 border rounded bg-success tasks text-light">
+        <div class="col-sm-8 offset-sm-2"><div class="p-5 border rounded bg-success tasks text-light">
           <h3 class="font-weight-bold text-uppercase text-center">Tasks</h3>
     
           <p>1. Follow the positive and negative path of the form</p>
@@ -111,20 +111,6 @@ function Forms() {
     </Form>
             
         </div></div>
-        
-        <div class="col-sm-4 col1 my-5 offset-sm-1 "><div class="p-5 border rounded bg-success text-light">
-         
-         <h3>In these exercises, you will learn such functions as:</h3>
-           
-         <ul>
-         <li>How to generate random test data</li>  
-           <li>How to validate form</li> 
-           <li>Find the bugs</li>  
-           <li>All the WebDriver basic actions</li> 
-           
-         </ul>
-        </div>
-       </div>
         </div>
     </div>   
     

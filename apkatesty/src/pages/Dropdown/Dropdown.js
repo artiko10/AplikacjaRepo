@@ -1,5 +1,4 @@
 import React,{useState} from 'react'
-import Select from "react-select";
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import  'react-multiple-select-dropdown-lite/dist/index.css';
@@ -8,21 +7,14 @@ import './Dropdown.css';
 
 
 function Dropdowns() {
-  const [selects,setSelects]=useState();
+  const [choice, setChoice]=useState('')
+  const name=["Anna", "Jan", "Marcin", "Agata", "Konrad", "Paulina", "Jakub", "Krystyna", "Anna"]
   const [value,setValue]=useState('');
   const handleSelect=(e)=>{
     console.log(e);
     setValue(e)
   }
- const options = [
-  {value: "opcja 01", label: "opcja 01"},
-  {value: "opcja 02", label: "opcja 02"},
-  {value: "opcja 03", label: "opcja 03"},
-  {value: "opcja 04", label: "opcja 04"},
-  {value: "opcja 05", label: "opcja 05"},
-  {value: "opcja 06", label: "opcja 06"},
-  
- ];
+ 
 
   return (
     <>
@@ -30,14 +22,14 @@ function Dropdowns() {
     <section class="dropdown-section">
       <div class="container">
         <div class="row">
-          <div class="col-sm-12 my-5 p-2">
-          <h1 class="font-weight-bold text-uppercase text-light title">Dropdown</h1>
+          <div class="col-sm-8 offset-sm-2 my-5 p-2">
+          <h1 class="font-weight-bold text-uppercase text-light title text-center">Dropdown</h1>
           </div>
         
         
        
           
-        <div class="col-sm-7"><div class="p-5 border rounded bg-success tasks">
+        <div class="col-sm-8 offset-sm-2"><div class="p-5 border rounded bg-success tasks">
           <h3 class="font-weight-bold text-uppercase text-center text-light">Tasks</h3>
     
           <p class="text-light">1. Select your favourite sport</p>
@@ -54,16 +46,14 @@ function Dropdowns() {
     </div>
       
 
-          <p class="text-light">2. Search for option1 and select it</p>
-          <Select
-          className="select"
-           isMulti 
-           options={options}
-           isClearable={true}
-           isSearchable={true}
-           isDisabled={false}
-           isLoading={false}
-           isRtl={false}/>
+          <p class="text-light">2. Search for name and select it</p>
+          <div className="main">
+            <input className="inputDropdown" list="data" onChange={(e) =>setChoice(e.target.value)} placeholder="Search"/>
+            <datalist id="data">
+              {name.map((op)=><option className="optionName">{op}</option>)}
+            </datalist>
+            <h4 class="text-light my-3">{choice}</h4>
+          </div>
           <p class="text-light">3. Choose one of the products and print all the options</p>
           <DropdownButton
       alignRight
@@ -79,24 +69,10 @@ function Dropdowns() {
               <Dropdown.Item eventKey="cheese">cheese</Dropdown.Item>
              
       </DropdownButton>
-      <h4 class="text-warning mt-4">You selected: {value}</h4>
+      <h4 class="text-light mt-4">You selected: {value}</h4>
         </div></div>
         
-        <div class="col-sm-4 col1 my-5 offset-sm-1 "><div class="p-5 border rounded bg-success text-light">
-         
-         <h3>In these exercises, you will learn such functions as:</h3>
-           
-         <ul>
-           <li>click()</li>  
-           <li>driver navigation commands</li> 
-           <li>getLocation()</li>  
-           <li>getCss()</li> 
-           <li>getSize()</li>
-           <li>isEnabled()</li>
-           
-         </ul>
-        </div>
-       </div>
+       
         </div>
     </div>   
     

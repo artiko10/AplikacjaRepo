@@ -109,14 +109,14 @@ function Drag() {
       <section class="drag-section">
         <div class="container">
           <div class="row">
-            <div class="col-sm-12 my-5 p-2">
-            <h1 class="font-weight-bold text-uppercase text-light title">Drag & Drop</h1>
+            <div class="col-sm-8 offset-sm-2 my-5 p-2">
+            <h1 class="font-weight-bold text-uppercase text-light title text-center">Drag & Drop</h1>
             </div>
           
           
          
             
-          <div class="col-sm-7"><div class="p-5 border rounded bg-success tasks ">
+          <div class="col-sm-8 offset-sm-2"><div class="p-5 border rounded bg-success tasks ">
             <h3 class="font-weight-bold text-uppercase text-center text-light my-5 mt-5">Tasks</h3>
             <div class="textTask">
             <p class="text-light">1. Verify correct operation of adding, deleting and moving new tasks</p>
@@ -140,20 +140,6 @@ function Drag() {
 
           </div></div>
           
-          <div class="col-sm-4 col1 my-5 offset-sm-1 "><div class="p-5 border rounded bg-success text-light">
-           
-           <h3>In these exercises, you will learn such functions as:</h3>
-             
-           <ul>
-             <li>Java calendar & moment.js</li>  
-             <li>How to set dynamic dates</li> 
-             <li>How to handle calendar elements</li>  
-             
-          
-             
-           </ul>
-          </div>
-         </div>
           </div>
       </div>   
       

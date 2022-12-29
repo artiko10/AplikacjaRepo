@@ -31,14 +31,14 @@ const sorting = (col) => {
     <section class="button-section">
       <div class="container">
         <div class="row">
-          <div class="col-sm-12 my-5 p-2">
-          <h1 class="font-weight-bold text-uppercase text-light title">Table</h1>
+          <div class="col-sm-8 offset-sm-2 my-5 p-2">
+          <h1 class="font-weight-bold text-uppercase text-light title text-center">Table</h1>
           </div>
         
         
        
           
-        <div class="col-sm-8"><div class="p-5 border rounded bg-success tasks text-light">
+        <div class="col-sm-8 offset-sm-2"><div class="p-5 border rounded bg-success tasks text-light">
           <h3 class="font-weight-bold text-uppercase text-center">Tasks</h3>
     
           <p>1. Sort the table</p>
@@ -65,22 +65,6 @@ const sorting = (col) => {
           </table>
           </div>
         </div></div>
-        
-        <div class="col-sm-3 col1 my-5 offset-sm-1 "><div class="p-5 border rounded bg-success text-light">
-         
-         <h3>In these exercises, you will learn such functions as:</h3>
-           
-         <ul>
-           <li>click()</li>  
-           <li>driver navigation commands</li> 
-           <li>getLocation()</li>  
-           <li>getCss()</li> 
-           <li>getSize()</li>
-           <li>isEnabled()</li>
-           
-         </ul>
-        </div>
-       </div>
         </div>
     </div>   
     

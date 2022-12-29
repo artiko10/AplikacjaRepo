@@ -8,14 +8,14 @@ function Input() {
     <section class="input-section">
       <div class="container">
         <div class="row">
-          <div class="col-sm-12 my-5 p-2">
-          <h1 class="font-weight-bold text-uppercase text-light title">Input</h1>
+          <div class="col-sm-8 offset-sm-2 my-5 p-2">
+          <h1 class="font-weight-bold text-uppercase text-light title text-center">Input</h1>
           </div>
         
         
        
           
-        <div class="col-sm-7"><div class="p-5 border rounded bg-success tasks text-light">
+        <div class="col-sm-8 offset-sm-2"><div class="p-5 border rounded bg-success tasks text-light">
           <h3 class="font-weight-bold text-uppercase text-center">Tasks</h3>
     
           <p>1.Enter your name and press TAB</p>
@@ -46,21 +46,6 @@ function Input() {
       <Form.Control placeholder="Disabled input" disabled />
     </Form.Group>
         </div></div>
-        
-        <div class="col-sm-4 col1 my-5 offset-sm-1 "><div class="p-5 border rounded bg-success text-light">
-         
-         <h3>In these exercises, you will learn such functions as:</h3>
-           
-         <ul>
-           <li>Java calendar & moment.js</li>  
-           <li>How to set dynamic dates</li> 
-           <li>How to handle calendar elements</li>  
-           
-        
-           
-         </ul>
-        </div>
-       </div>
         </div>
     </div>   
     

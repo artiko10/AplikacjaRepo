@@ -40,14 +40,11 @@ const componentRef = useRef();
     <section class="upload-section">
       <div class="container">
         <div class="row">
-          <div class="col-sm-12 my-5 p-2">
-          <h1 class="font-weight-bold text-uppercase text-light title">Upload</h1>
+          <div class="col-sm-8 offset-sm-2 my-5 p-2">
+          <h1 class="font-weight-bold text-uppercase text-light title text-center">Upload</h1>
           </div>
-        
-        
-       
-          
-        <div class="col-sm-7"><div class="p-5 border rounded bg-success tasks">
+      
+        <div class="col-sm-8 offset-sm-2"><div class="p-5 border rounded bg-success tasks">
           <h3 class="font-weight-bold text-uppercase text-center text-light">Tasks</h3>
     
           <p class="text-light">1. Upload</p>
@@ -102,22 +99,6 @@ const componentRef = useRef();
           <button onClick={handlePrint} className="print__button btn btn-primary">  Print </button> 
         </div>  
         </div></div>
-        
-        <div class="col-sm-4 col1 my-5 offset-sm-1 "><div class="p-5 border rounded bg-success text-light">
-         
-         <h3>In these exercises, you will learn such functions as:</h3>
-           
-         <ul>
-           <li>click()</li>  
-           <li>driver navigation commands</li> 
-           <li>getLocation()</li>  
-           <li>getCss()</li> 
-           <li>getSize()</li>
-           <li>isEnabled()</li>
-           
-         </ul>
-        </div>
-       </div>
         </div>
     </div>   
     

@@ -1,3 +1,16 @@
+
+
+
+#dropdown-menu-align-right{
+    width: 21%;
+}
+
+
+.inputDropdown{
+    height: 30px;
+    width: 30%;
+}
+
 .app-select{
 justify-content: center;
 display: flex;
@@ -27,7 +40,7 @@ background-color: black;
         position: relative;
         display: inline-block;
         margin-bottom: 15px;
-        width: 100%;
+        width: 30%;
     }    .select select {
             font-family: 'Arial';
             display: inline-block;
@@ -37,7 +50,7 @@ background-color: black;
             outline: 0;
             border: 2px groove #000000;
             border-radius: 0px;
-            background: #4d54cd;
+            background: #f0f0f4;
             color: #141212;
             appearance: none;
             -webkit-appearance: none;
@@ -49,7 +62,7 @@ background-color: black;
             .select select:hover,
             .select select:focus {
                 color: #000000;
-                background: #685fec;
+                background: #f0f0f4;
             }
             .select select:disabled {
                 opacity: 0.5;

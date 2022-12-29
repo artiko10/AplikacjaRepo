@@ -39,14 +39,14 @@ function Checkbox() {
 <section class="checkbox-section">
   <div class="container">
     <div class="row">
-      <div class="col-sm-12 my-5 p-2">
-      <h1 class="font-weight-bold text-uppercase text-light title">Checkbox</h1>
+      <div class="col-sm-8 offset-sm-2 my-5 p-2">
+      <h1 class="font-weight-bold text-uppercase text-light title text-center">Checkbox</h1>
       </div>
     
     
    
       
-    <div class="col-sm-7"><div class="p-5 border rounded bg-success tasks text-light">
+    <div class="col-sm-8 offset-sm-2"><div class="p-5 border rounded bg-success tasks text-light">
       <h3 class="font-weight-bold text-uppercase text-center">Tasks</h3>
 
       <p>1. Cofirm you can select only one radio button</p>
@@ -158,19 +158,7 @@ function Checkbox() {
       </form>
         
     </div></div>
-    <div class="col-sm-4 col1 my-5 offset-sm-1"><div class="p-5 border rounded bg-success text-light">
-     
-     <h3 class="text-center">In these exercises, you will learn such functions as:</h3>
-       
-     <ul>
-       <li>click()</li>  
-       <li>isSelected()</li> 
-       <li>isEnabled()</li>  
-      
-       
-     </ul>
-    </div>
-   </div>
+   
     </div>
 </div>   
 

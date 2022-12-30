@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './Upload.css';
 import React,{useRef} from 'react';
 import { useReactToPrint } from "react-to-print";
+import MyImage from '../Upload/picture.jpeg'
 
 
 
@@ -45,7 +46,7 @@ const componentRef = useRef();
         <div class="col-sm-8 offset-sm-2"><div class="p-5 border rounded bg-success tasks">
           <h3 class="font-weight-bold text-uppercase text-center text-light">Tasks</h3>
     
-          <p class="text-light">1. Upload</p>
+          <p class="text-light">1. Upload and delete photo</p>
           
           <form Confirm={ Confirm } className="form-inline">
                 <div className="form-group">
@@ -70,8 +71,8 @@ const componentRef = useRef();
             
             <p class="text-light">2. Download</p>
 
-          <img src="https://upload.wikimedia.org/wikipedia/en/a/a9/Example.jpg" alt="dsf.jpeg" /> <br></br>
-          <a href="https://upload.wikimedia.org/wikipedia/en/a/a9/Example.jpg"><button type='submit' className="btn btn-primary">Open image in tab</button></a>
+            <img src={MyImage} alt="dsf.jpeg" /> <br></br>
+          <a href={MyImage} download={MyImage}><button type='submit' className="btn btn-primary">Download Now</button></a>
 
           <p class="text-light">3. Print</p>
           <div class="print__section">

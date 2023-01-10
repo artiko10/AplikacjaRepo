@@ -11,10 +11,10 @@ import VolumeUp from '@mui/icons-material/VolumeUp';
 
 function Sliders() {
 
-  const [value, setValue] = React.useState(30);
+  const [value, setVolume] = React.useState(30);
 
   const handleChange = (event, newValue) => {
-    setValue(newValue);
+    setVolume(newValue);
   };
 
   
@@ -50,7 +50,7 @@ return (
 
     <h5 class="text-light my-5">2. Set volume to 80%</h5>
     <Box sx={{ width: 200 }}>
-      <Stack spacing={2} direction="row" sx={{ mb: 1 }} alignItems="center">
+      <Stack spacing={2} direction="row">
         <VolumeDown />
         <Slider aria-label="Volume" value={value} onChange={handleChange} />
         <VolumeUp />

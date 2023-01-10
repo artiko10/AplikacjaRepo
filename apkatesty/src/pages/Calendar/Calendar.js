@@ -15,16 +15,12 @@ function Calendar() {
   return (
     <>
     
-    <section class="button-section">
+    <section class="calendar-section">
       <div class="container">
         <div class="row">
           <div class="col-sm-8 offset-sm-2 my-5 p-2">
           <h1 class="font-weight-bold text-uppercase text-light title text-center">Datepicker</h1>
           </div>
-        
-        
-       
-          
         <div class="col-sm-8 offset-sm-2"><div class="p-5 border rounded bg-success tasks text-light">
           <h3 class="font-weight-bold text-uppercase text-center">Tasks</h3>
     

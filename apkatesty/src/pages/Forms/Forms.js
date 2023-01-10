@@ -40,30 +40,21 @@ function Forms() {
           <p>1. Follow the positive and negative path of the form</p>
           <Form noValidate validated={validated} onSubmit={handleSubmit}>
       <Row className="mb-3">
-        <Form.Group as={Col} md="4" controlId="validationCustom01">
+        <Form.Group as={Col} controlId="inputFirstName">
           <Form.Label>First name</Form.Label>
           <Form.Control
             required
             type="text"
             placeholder="First name"
-           
-          />
-          <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+           />
+           <Form.Control.Feedback type="invalid">
+           Required field
+            </Form.Control.Feedback>
         </Form.Group>
-        <Form.Group as={Col} md="4" controlId="validationCustom02">
-          <Form.Label>Last name</Form.Label>
-          <Form.Control
-            required
-            type="text"
-            placeholder="Last name"
-            
-          />
-          <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
-        </Form.Group>
-        <Form.Group as={Col} md="4" controlId="validationCustomUsername">
+        <Form.Group as={Col} controlId="inputUsername">
           <Form.Label>Username</Form.Label>
           <InputGroup hasValidation>
-            <InputGroup.Text id="inputGroupPrepend">@</InputGroup.Text>
+           
             <Form.Control
               type="text"
               placeholder="Username"
@@ -71,39 +62,54 @@ function Forms() {
               required
             />
             <Form.Control.Feedback type="invalid">
-              Please choose a username.
+            Required field
             </Form.Control.Feedback>
           </InputGroup>
         </Form.Group>
       </Row>
       <Row className="mb-3">
-        <Form.Group as={Col} md="6" controlId="validationCustom03">
+      <Form.Group as={Col} controlId="inputLastName">
+          <Form.Label>Last name</Form.Label>
+          <Form.Control
+            required
+            type="text"
+            placeholder="Last name"   
+          />
+           <Form.Control.Feedback type="invalid">
+           Required field
+            </Form.Control.Feedback>
+        </Form.Group>
+      
+        <Form.Group as={Col} md="3" controlId="inputWeight">
+          <Form.Label>Weight</Form.Label>
+          <Form.Control type="text" placeholder="Weight" required />
+          <Form.Control.Feedback type="invalid">
+          Required field
+          </Form.Control.Feedback>
+        </Form.Group>
+        </Row>
+        <Row className="mb-3">
+        <Form.Group as={Col} md="3" controlId="inputHeight">
+          <Form.Label>Height</Form.Label>
+          <Form.Control type="text" placeholder="Height" required />
+          <Form.Control.Feedback type="invalid">
+          Required field
+          </Form.Control.Feedback>
+        </Form.Group>
+
+        <Form.Group as={Col} controlId="inputCity">
           <Form.Label>City</Form.Label>
           <Form.Control type="text" placeholder="City" required />
           <Form.Control.Feedback type="invalid">
-            Please provide a valid city.
+          Required field
           </Form.Control.Feedback>
         </Form.Group>
-        <Form.Group as={Col} md="3" controlId="validationCustom04">
-          <Form.Label>State</Form.Label>
-          <Form.Control type="text" placeholder="State" required />
-          <Form.Control.Feedback type="invalid">
-            Please provide a valid state.
-          </Form.Control.Feedback>
-        </Form.Group>
-        <Form.Group as={Col} md="3" controlId="validationCustom05">
-          <Form.Label>Zip</Form.Label>
-          <Form.Control type="text" placeholder="Zip" required />
-          <Form.Control.Feedback type="invalid">
-            Please provide a valid zip.
-          </Form.Control.Feedback>
-        </Form.Group>
+       
       </Row>
       <Form.Group className="mb-3">
         <Form.Check
           required
-          label="Agree to terms and conditions"
-          feedback="You must agree before submitting."
+          label="Agree terms"
           feedbackType="invalid"
         />
       </Form.Group>

@@ -41,7 +41,7 @@ const sorting = (col) => {
         <div class="col-sm-8 offset-sm-2"><div class="p-5 border rounded bg-success tasks text-light">
           <h3 class="font-weight-bold text-uppercase text-center">Tasks</h3>
     
-          <p>1. Sort the table</p>
+          <p>1. Verify table data loads and sort the table</p>
          <div className='container'>        
           <table id="MyTable" className="table text-light" >
             <thead>

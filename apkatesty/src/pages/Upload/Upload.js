@@ -74,29 +74,7 @@ const componentRef = useRef();
             <img src={MyImage} alt="dsf.jpeg" /> <br></br>
           <a href={MyImage} download={MyImage}><button type='submit' className="btn btn-primary">Download Now</button></a>
 
-          <p class="text-light">3. Print</p>
-          <div class="print__section">
         
-          <div ref={componentRef} className="card">
-            <div class="float__start">
-              <h3 class="card-title mb-0">Personal data</h3>
-            </div>
-            <hr />
-            <div class="float__infoss">
-              <ul>
-                <li> Name : <span> Jan </span> </li>
-                <li> Surname : <span> Kowalski </span> </li>
-                <li> Gender : <span> Male </span> </li>
-                <li> Email : <span> jan.kowalski@gmail.com</span> </li>
-                <li> Age: <span> </span> 48 </li>
-                <li> Profession : <span> Teacher </span> </li>
-                <li> Hobby : <span>Sport</span> </li>
-                <li> Phone : <span> 500 500 500 </span> </li> 
-              </ul>
-            </div>
-          </div>
-          <button onClick={handlePrint} className="print__button btn btn-primary">  Print </button> 
-        </div>  
         </div></div>
         </div>
     </div>   
@@ -113,7 +91,7 @@ const styles = {
     display: "flex",
     flexDirection: "column",
   },
-  image: { maxWidth: "100%", maxHeight: 320 },
+  
   delete: {
     cursor: "pointer",
     padding: 15,
